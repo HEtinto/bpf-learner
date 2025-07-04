@@ -19,3 +19,15 @@ bpf devel
 ```sh
 sudo dnf install -y llvm clang libbpf-devel elfutils-libelf-devel
 ```
+
+## QA
+
+
+### LLVM registered more than once
+
+Q: 
+
+Abort on startup: CommandLine Error: Option ... registered more than once!
+
+Solve: 
+  add -DENABLE_LLVM_SHARED=1 when use cmake to build.
