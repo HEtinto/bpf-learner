@@ -25,12 +25,16 @@ sudo dnf install -y llvm clang libbpf-devel elfutils-libelf-devel
 
 ### LLVM registered more than once
 
-Q: 
-    Abort on startup: CommandLine Error: Option ... registered more than once!
+Q:
+
+Abort on startup: CommandLine Error: Option ... registered more than once!
 
 Solve: 
-    add -DENABLE_LLVM_SHARED=1 when use cmake to build.
+
+add -DENABLE_LLVM_SHARED=1 when use cmake to build.
 
 Correlation issues:
-    https://github.com/bpftrace/bpftrace/commit/debc79ef9ad4784258705a92ae70f9c7689a9c24
-    https://github.com/iovisor/bcc/issues/2278
+
+https://github.com/bpftrace/bpftrace/commit/debc79ef9ad4784258705a92ae70f9c7689a9c24
+
+https://github.com/iovisor/bcc/issues/2278
